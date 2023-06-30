@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script parses Apache log files in ls format.
+
+myfile="apache-access.log"
+awk -F' ' '{ print $1, $9}' $myfile | sort | uniq -c|sort -nr
