@@ -1,4 +1,4 @@
 #execute the pkill command
-exec { 'killmenow':
-  command => '/bin/pkill',
+exec { 'pkill -f killmenow':
+  provider => 'shell'
 }
