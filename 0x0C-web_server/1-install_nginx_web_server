@@ -4,7 +4,6 @@
 # ufw Uncomplicated Firewall, will be set to HTTP only opens port 80
 # serve the default Nginx page
 # restart the server
-
 sudo apt-get update
 sudo apt-get -y install nginx
 ufw allow 'Nginx HTTP'
