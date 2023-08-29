@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script fixes the issue after accessing the containerized ubuntu server as root
+
+service apache2 start
