@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script once executed will install Nginx web server 
+# -y flag to automatically answer yes to all prompts
+# ufw Uncomplicated Firewall, will be set to HTTP only opens port 80
+# serve the default Nginx page
+# restart the server
+
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo service nginx restart
