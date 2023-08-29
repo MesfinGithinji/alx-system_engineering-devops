@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# redirect so that /redirect_me is redirecting to another page.
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html
+sudo sed -i "53s/.*/location \/redirect_me {\n\treturn 301 http:\/\/alxafrica.com\/\;\n}/" /etc/nginx/sites-available/default
+sudo service nginx start
