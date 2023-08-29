@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script automates file transfer from a client to a server
 # It uses the $# variable to check the number of command-line arguments
 # For this script we expect 4 arguments   
@@ -19,3 +19,4 @@ else
     # Transfers the file to the remote server using the specified SSH key
     scp -i "$4" -o StrictHostKeyChecking=no "$1" "$3@$2":~/
 fi
+
