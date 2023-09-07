@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# debugging nginx
-# the init service must says  nginx is not running
+# debugging nginxthe init service must say nginx is not running
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -o nginx
 
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
-kill "$(pgrep 'nginx' | head -1)"
