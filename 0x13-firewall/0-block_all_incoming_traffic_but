@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+#step1 update your system
+sudo apt-get update
+
+#step2 install ufw
+sudo apt-get install ufw
+
+#step3 disable policies 
+sudo ufw default deny incoming
+
+#step4 allow specific ports
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
+
+#step5 print put the results
+sudo ufw status verbose
+
+#step6 enable ufw(to enforce the policies)
+sudo ufw enable 
+
+#step7 check overall status
+sudo ufw status
