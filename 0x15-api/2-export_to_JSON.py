@@ -19,7 +19,7 @@ if __name__ == '__main__':
     dictionary = {user_id: []}
     for todo in todos:
         dictionary[user_id].append({
-            "todo": todo.get('title'),
+            "task": todo.get('title'),
             "completed": todo.get('completed'),
             "username": username
         })
