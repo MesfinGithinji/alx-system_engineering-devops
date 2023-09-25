@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Exports to CSV"""
+"""Retrieves data and then exports to a CSV"""
 
 from requests import get
 from sys import argv
